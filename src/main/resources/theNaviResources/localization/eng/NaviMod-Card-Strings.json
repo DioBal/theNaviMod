@@ -1,0 +1,135 @@
+{
+  "theNavi:Strike_Navi_Blue": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theNavi:Defend_Navi_Blue": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theNavi:CyclingStarter": {
+    "NAME": "Cycler 1: Draw",
+    "EXTENDED_DESCRIPTION": ["Cycle 3 NL Gain !B! Block. NL 1: Draw !M! Card. NL 2: [#888888]Apply[] !theNavi:SecondMagic! [#888888]Vulnerable.[] NL 3: [#888888]Apply[] !theNavi:SecondMagic! [#888888]Weak.[]",
+      "Cycle 3 NL Gain !B! Block. NL 1: [#888888]Draw[] !M! [#888888]Card. NL 2: Apply !theNavi:SecondMagic! Vulnerable. NL 3: [#888888]Apply[] !theNavi:SecondMagic! [#888888]Weak.[]",
+      "Cycle 3 NL Gain !B! Block. NL 1: [#888888]Draw[] !M! [#888888]Card. NL 2: [#888888]Apply[] !theNavi:SecondMagic! [#888888]Vulnerable.[] NL 3: Apply !theNavi:SecondMagic! Weak."]
+  },
+  "theNavi:CopyCard":{
+  "NAME": "CopyCard",
+  "DESCRIPTION": "Choose a card. Add a copy of that card into your hand. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "Choose a card. Add a copy of that card into your hand. NL Exhaust. NL Retain."
+},
+
+  "theNavi:Cannon":{
+    "NAME": "Cannon",
+    "DESCRIPTION": "Deal !D! Damage. NL Fuse 2."
+  },
+  "theNavi:HiCannon":{
+    "NAME": "HiCannon",
+    "DESCRIPTION": "Deal !D! Damage. NL Apply !M! Vulnerable. NL Fuse 2."
+  },
+  "theNavi:MCannon":{
+    "NAME": "M-Cannon",
+    "DESCRIPTION": "Deal !D! Damage. NL Apply !theNavi:SecondMagic! Vulnerable."
+  },
+  "theNavi:Vulcan1":{
+    "NAME": "Vulcan1",
+    "DESCRIPTION": "Deal !D! Damage !M! Times. NL Fuse 2."
+  },
+  "theNavi:Vulcan2":{
+    "NAME": "Vulcan2",
+    "DESCRIPTION": "Deal !D! Damage !M! Times. NL Fuse 2."
+  },
+  "theNavi:Vulcan3":{
+    "NAME": "Vulcan3",
+    "DESCRIPTION": "Deal !D! Damage !M! Times."
+  },
+  "theNavi:Guard1":{
+    "NAME": "Guard1",
+    "DESCRIPTION": "Gain !B! Block. NL Fuse 2."
+  },
+  "theNavi:Guard2":{
+    "NAME": "Guard2",
+    "DESCRIPTION": "Gain !B! Block. NL Fuse 2."
+  },
+  "theNavi:Guard3":{
+    "NAME": "Guard3",
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn."
+  },
+  "theNavi:FlwrPwer":{
+    "NAME": "FlwrPwer",
+    "DESCRIPTION": "Gain !M! Regen."
+  },
+  "theNavi:Igniter":{
+    "NAME": "Igniter",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage to an enemy, apply 1 Burning."
+  },
+  "theNavi:Bubbler":{
+  "NAME": "Bubbler",
+  "DESCRIPTION": "Deal !D! Damage. NL Enemy loses !M! Strength this turn."
+},
+  "theNavi:HotBody":{
+    "NAME": "HotBody",
+    "DESCRIPTION": "Gain !B! Block. NL Your next attack deals !M! more damage."
+  },
+  "theNavi:StepSwrd":{
+    "NAME": "StepSwrd",
+    "DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !theNavi:SecondMagic! Card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !theNavi:SecondMagic! Cards."
+  },
+  "theNavi:TrialError": {
+    "NAME": "Try&Err",
+    "DESCRIPTION": "Retain your rightmost card.",
+    "UPGRADE_DESCRIPTION": "Retain your !M! rightmost cards."
+  },
+
+
+
+
+
+
+
+
+  "theNavi:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Keywords."
+  },
+  "theNavi:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theNavi:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "theNavi:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 Keywords."
+  },
+  "theNavi:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theNavi:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
+  },
+  "theNavi:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "theNavi:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [R] times. NL (Deal !theNavi:ENERGY_DAMAGE! damage total.)"
+  },
+  "theNavi:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !theNavi:SecondMagic! poison to an enemy."
+  },
+  "theNavi:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  }
+}

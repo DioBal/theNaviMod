@@ -1,0 +1,18 @@
+{
+"theNavi:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
+},
+"theNavi:BurningPower": {
+        "NAME": "Burning",
+        "DESCRIPTIONS": ["Enemy takes ", " damage per turn."]
+},
+"theNavi:IgniterPower": {
+        "NAME": "Igniter",
+        "DESCRIPTIONS": ["Whenever an attack deals unblocked damage, apply ", " Burning."]
+},
+"theDefault:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH ", " enemy." , " enemies."]
+}
+}

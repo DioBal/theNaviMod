@@ -1,0 +1,12 @@
+{
+  "modid": "navimod",
+  "name": "Navi Mod",
+  "author_list": ["RavenGr"],
+  "description": "A character based on Megaman Battle Network",
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}
+
