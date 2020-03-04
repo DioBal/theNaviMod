@@ -60,7 +60,6 @@ public class HiCannon extends AbstractDefaultCard {
     public static final CardColor COLOR = TheNavi.Enums.COLOR_BLUE;
 
     private static final int COST = 2;  // COST = 2
-    private static final int UPGRADED_COST = 2; // UPGRADED_COST = 2
 
     private static final int DAMAGE = 20;    // DAMAGE = 16
     private static final int UPGRADE_PLUS_DMG = 6;  // UPGRADE_PLUS_DMG = 6
@@ -94,8 +93,8 @@ public class HiCannon extends AbstractDefaultCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
     @Override

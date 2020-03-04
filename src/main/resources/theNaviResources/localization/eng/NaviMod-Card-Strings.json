@@ -73,8 +73,8 @@
   },
   "theNavi:StepSwrd":{
     "NAME": "StepSwrd",
-    "DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !theNavi:SecondMagic! Card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !theNavi:SecondMagic! Cards."
+    "DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !M! Card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. Draw !M! Cards."
   },
   "theNavi:TrialError": {
     "NAME": "Try&Err",
@@ -83,7 +83,7 @@
   },
   "theNavi:AbsEssns": {
     "NAME": "AbsEssns",
-    "DESCRIPTION": "Deal !M! Damage. NL If Fatal get an extra card reward at the end of combat."
+    "DESCRIPTION": "Deal !D! Damage. NL If Fatal get an extra card reward at the end of combat."
   },
 
 

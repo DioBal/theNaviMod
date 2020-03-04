@@ -69,6 +69,7 @@ public class Guard1 extends AbstractDefaultCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
     @Override

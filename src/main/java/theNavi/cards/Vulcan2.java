@@ -80,6 +80,7 @@ public class Vulcan2 extends AbstractDefaultCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 

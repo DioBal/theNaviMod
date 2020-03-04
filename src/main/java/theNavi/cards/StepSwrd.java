@@ -13,8 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theNavi.NaviMod;
 import theNavi.characters.TheNavi;
 
-import javax.swing.text.html.HTMLDocument;
-
 import static theNavi.NaviMod.makeCardPath;
 
 // public class StepSwrd extends AbstractDefaultCard
@@ -45,8 +43,8 @@ public class StepSwrd extends AbstractDefaultCard {
 
     private static final int DAMAGE = 5;
     private static final int BLOCK = 5;
-    private static final int Draw = 1;
-    private static final int Draw_PLUS = 1;
+    private static final int DRAW = 1;
+    private static final int DRAW_PLUS = 1;
 
     // /STAT DECLARATION/
 
@@ -55,7 +53,7 @@ public class StepSwrd extends AbstractDefaultCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = Draw; //erase if 1
+        magicNumber = baseMagicNumber = DRAW; //erase if 1
     }
 
 
@@ -76,7 +74,7 @@ public class StepSwrd extends AbstractDefaultCard {
         if (!upgraded) {
             upgradeName();
             this.rawDescription=UPGRADE_DESCRIPTION;
-            upgradeDefaultSecondMagicNumber(Draw_PLUS);
+            upgradeMagicNumber(DRAW_PLUS);
             initializeDescription();
         }
     }

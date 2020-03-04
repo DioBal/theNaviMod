@@ -3,7 +3,7 @@
     <groupId>navimod</groupId>
     <artifactId>NaviMod</artifactId>
     <!--<version>1.2.0</version>-->
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>NaviMod</name>
 
     <properties>

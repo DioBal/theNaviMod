@@ -41,14 +41,14 @@ public class CopyCard extends AbstractDefaultCard {
 
     private static final int COST = 1;
 
-    private static final int COPIES = 1; //erase if 0
+    private static final int COPIES = 1;
 
     // /STAT DECLARATION/
 
 
     public CopyCard() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = COPIES; //erase if 0
+        magicNumber = baseMagicNumber = COPIES;
         this.exhaust = true;
     }
 

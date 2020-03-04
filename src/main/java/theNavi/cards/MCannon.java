@@ -40,7 +40,6 @@ public class MCannon extends AbstractDefaultCard { //NOT REGISTERED IN THE EDIT 
     public static final CardColor COLOR = TheNavi.Enums.COLOR_BLUE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 30;    //
     private static final int UPGRADE_PLUS_DMG = 6;
@@ -72,7 +71,7 @@ public class MCannon extends AbstractDefaultCard { //NOT REGISTERED IN THE EDIT 
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+
             initializeDescription();
         }
     }

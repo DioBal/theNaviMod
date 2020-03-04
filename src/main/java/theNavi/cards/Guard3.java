@@ -51,7 +51,7 @@ public class Guard3 extends AbstractDefaultCard {
     public Guard3() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        //this.setBannerTexture();
+        //this.setBannerTexture(); TODO: Change Textures etc. of fused cards
     }
 
 

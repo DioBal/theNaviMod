@@ -74,6 +74,7 @@ public class Cannon extends AbstractDefaultCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
+            this.cardsToPreview.upgrade();
         }
     }
 

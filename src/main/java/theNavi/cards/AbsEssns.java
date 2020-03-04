@@ -14,7 +14,6 @@ import theNavi.characters.TheNavi;
 
 import static theNavi.NaviMod.makeCardPath;
 
-// public class AbsEssns extends AbstractDefaultCard
 public class AbsEssns extends AbstractDefaultCard {
 
     // TEXT DECLARATION
@@ -32,13 +31,12 @@ public class AbsEssns extends AbstractDefaultCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON; //  
+    private static final CardRarity RARITY = CardRarity.RARE; //
     private static final CardTarget TARGET = CardTarget.ENEMY;  //
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = TheNavi.Enums.COLOR_BLUE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 16;
@@ -61,7 +59,6 @@ public class AbsEssns extends AbstractDefaultCard {
 //            this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
 //        }
         //TODO:add absorption effect here... bite or something?
-
         this.addToBot(new AbsEssnsAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 
@@ -72,7 +69,6 @@ public class AbsEssns extends AbstractDefaultCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }
