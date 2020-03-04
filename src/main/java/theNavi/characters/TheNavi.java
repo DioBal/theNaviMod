@@ -157,8 +157,8 @@ public class TheNavi extends CustomPlayer {
         retVal.add(Strike_Navi_Blue.ID);
         retVal.add(Strike_Navi_Blue.ID);
         retVal.add(Strike_Navi_Blue.ID);
-        retVal.add(Strike_Navi_Blue.ID);
 
+        retVal.add(Defend_Navi_Blue.ID);
         retVal.add(Defend_Navi_Blue.ID);
         retVal.add(Defend_Navi_Blue.ID);
         retVal.add(Defend_Navi_Blue.ID);
@@ -166,19 +166,6 @@ public class TheNavi extends CustomPlayer {
         retVal.add(CopyCard.ID);
         retVal.add(CyclingStarter.ID);
 
-//        retVal.add(DefaultRareAttack.ID);
-//
-//        retVal.add(Defend_Navi_Blue.ID);
-//        retVal.add(DefaultUncommonSkill.ID);
-//        retVal.add(DefaultRareSkill.ID);
-//
-//        retVal.add(DefaultCommonPower.ID);
-//        retVal.add(DefaultUncommonPower.ID);
-//        retVal.add(DefaultRarePower.ID);
-//
-//        retVal.add(DefaultAttackWithVariable.ID);
-//        retVal.add(DefaultSecondMagicNumberSkill.ID);
-//        retVal.add(DefaultOrbSkill.ID);
         return retVal;
     }
 
@@ -190,14 +177,13 @@ public class TheNavi extends CustomPlayer {
 
         UnlockTracker.markRelicAsSeen(MegaBuster.ID);
 
-
         return retVal;
     }
 
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playA("ORB_LIGHTNING_CHANNEL", 1.25f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -205,7 +191,7 @@ public class TheNavi extends CustomPlayer {
     // character Select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_DAGGER_1";
+        return "ORB_LIGHTNING_CHANNEL";
     }
 
     // Should return how much HP your maximum HP reduces by when starting a run at

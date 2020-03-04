@@ -30,24 +30,6 @@ import theNavi.variables.DefaultSecondMagicNumber;
 import java.nio.charset.StandardCharsets;
 
 
-// FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
-// Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll to the very bottom of this file. Change the id string from "theDefault:" to "yourModName:" or whatever your heart desires (don't use spaces).
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "theDefault". You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories (Be careful.).
-// Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
-// After you sorta get the hang of how to make cards, check out the card template which will make your life easier
-
-/*
- * With that out of the way:
- * Welcome to this mildly over-commented Slay the Spire modding base.
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (character,
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, 3 types of relics, etc.
- * If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add
- * https://github.com/daviscook477/BaseMod/wiki - work your way through with this base.
- * Feel free to use this in any way you like, of course. Happy modding!
- */
-
 @SpireInitializer
 public class NaviMod implements
         EditCardsSubscriber,
@@ -63,14 +45,14 @@ public class NaviMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Navi Mod";
-    private static final String AUTHOR = "RavenGr"; // And pretty soon - You!
+    private static final String AUTHOR = "RavenGr";
     private static final String DESCRIPTION = "An MMBN mod.";
 
     // =============== INPUT TEXTURE LOCATION =================
 
     // Colors (RGB)
     // Character Color
-    public static final Color NAVI_BLUE = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    public static final Color NAVI_BLUE = CardHelper.getColor(88.0f, 900f, 241.0f);
 
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -226,7 +208,7 @@ public class NaviMod implements
 
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabel("NaviMod doesn't have any settings! An example of those may come later.", 400.0f, 700.0f,
+        settingsPanel.addUIElement(new ModLabel("NaviMod doesn't have any settings!", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
         }));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
@@ -237,8 +219,8 @@ public class NaviMod implements
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
-
+        //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
+        //TODO: Add events?
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
 
@@ -256,8 +238,8 @@ public class NaviMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_NAVI".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheNavi.Enums.THE_NAVI);
-
+        //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheNavi.Enums.THE_NAVI);
+        //TODO: Add potions?
         logger.info("Done editing potions");
     }
 
@@ -272,16 +254,16 @@ public class NaviMod implements
 
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheNavi.Enums.COLOR_BLUE);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheNavi.Enums.COLOR_BLUE);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheNavi.Enums.COLOR_BLUE);
+//        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheNavi.Enums.COLOR_BLUE);
+//        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheNavi.Enums.COLOR_BLUE);
+//        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheNavi.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new MegaBuster(), TheNavi.Enums.COLOR_BLUE);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         logger.info("Done adding relics!");
     }
 
@@ -296,11 +278,10 @@ public class NaviMod implements
         //Ignore this
         pathCheck();
         // Add the Custom Dynamic Variables
-        logger.info("Add variabls");
-        // Add the Custom Dynamic variabls
+        logger.info("Add variables");
+        // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
-        //TODO: add keywords, somewhere
         logger.info("Adding cards");
         // Add the cards
         BaseMod.addCard(new Strike_Navi_Blue());
@@ -327,7 +308,7 @@ public class NaviMod implements
         BaseMod.addCard(new HotBody());
         BaseMod.addCard(new TrialError());
 
-        BaseMod.addCard(new ExtraCard());
+        BaseMod.addCard(new AbsEssns());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -335,18 +316,9 @@ public class NaviMod implements
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
         //TODO: Add these after card pool is complete
-//        UnlockTracker.unlockCard(DefaultOrbSkill.ID);
-//        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-//        UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
+
 //        UnlockTracker.unlockCard(Defend_Navi_Blue.ID);
-//        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultRareAttack.ID);
-//        UnlockTracker.unlockCard(DefaultRareSkill.ID);
-//        UnlockTracker.unlockCard(DefaultRarePower.ID);
+
 
         logger.info("Done adding cards!");
     }

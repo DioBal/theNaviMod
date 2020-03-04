@@ -81,7 +81,10 @@
     "DESCRIPTION": "Retain your rightmost card.",
     "UPGRADE_DESCRIPTION": "Retain your !M! rightmost cards."
   },
-
+  "theNavi:AbsEssns": {
+    "NAME": "AbsEssns",
+    "DESCRIPTION": "Deal !M! Damage. NL If Fatal get an extra card reward at the end of combat."
+  },
 
 
 
