@@ -309,6 +309,7 @@ public class NaviMod implements
         BaseMod.addCard(new TrialError());
 
         BaseMod.addCard(new AbsEssns());
+        
 
 
         logger.info("Making sure the cards are unlocked.");

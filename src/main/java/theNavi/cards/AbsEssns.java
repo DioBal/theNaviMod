@@ -1,6 +1,7 @@
 package theNavi.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import theNavi.NaviMod;
 import theNavi.actions.AbsEssnsAction;
 import theNavi.characters.TheNavi;
@@ -39,7 +41,7 @@ public class AbsEssns extends AbstractDefaultCard {
     private static final int COST = 2;
 
     private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 16;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 
@@ -55,9 +57,10 @@ public class AbsEssns extends AbstractDefaultCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        if (m != null) {
-//            this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
-//        }
+        if (m != null) {
+            this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        }
+
         //TODO:add absorption effect here... bite or something?
         this.addToBot(new AbsEssnsAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
